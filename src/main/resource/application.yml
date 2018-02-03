@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: logback
+  profiles:
+    active: dev #启动命令--spring.profiles.active=dev,作用与环境包括日志环境，一个“-”是执行，两个“--”是赋值参数
+server: 
+  port: 7001 
+logging:
+  file: ./springboot.log #输出到本项目
+  level: 
+    org.springframework.web: INFO
+  path: /logs/${spring.application.name} #输出到磁盘目录
